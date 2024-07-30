@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { TextField, Button, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { TextField, Button,Card,CardMedia, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import axios from 'axios';
+import bookingpage from '../assets/images/bookingpage.jpg';
+import map from '../assets/images/map.jpg';
 
 const RideRequestForm = () => {
   const [pickupLocation, setPickupLocation] = useState('');
@@ -40,31 +42,30 @@ const RideRequestForm = () => {
 
   return (
     <>
+      <Card style={{ marginBottom: '30px',  borderRadius: 1 }}>
+        <CardMedia
+          component="img"
+          alt="Banner 1"
+          height="600"
+          image={bookingpage}
+        />
+      </Card>
+
+
       <form onSubmit={handleRequestRide}>
+        
         <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <TextField
-              label="Pick-up Location"
-              variant="outlined"
-              fullWidth
-              value={pickupLocation}
-              onChange={(e) => setPickupLocation(e.target.value)}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              label="Drop-off Location"
-              variant="outlined"
-              fullWidth
-              value={dropoffLocation}
-              onChange={(e) => setDropoffLocation(e.target.value)}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Button type="submit" variant="contained" color="primary" fullWidth>
+        <Grid item xs={12}>
+        <Button 
+                type="submit" 
+                variant="contained" 
+                color="secondary" 
+                fullWidth={false} 
+                sx={{ color:'flack', borderRadius: 2, width: '80%' }}
+              >
               Request Ride
             </Button>
-          </Grid>
+          </Grid> 
         </Grid>
       </form>
 
