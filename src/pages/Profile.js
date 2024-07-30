@@ -6,6 +6,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import banner1 from '../assets/images/banner1.jpg';
 import banner2 from '../assets/images/banner2.jpg';
 
+
 const Profile = () => {
   return (
     <div>
@@ -16,7 +17,7 @@ const Profile = () => {
           component="img"
           alt="Banner 1"
           height="140"
-          image={banner1}
+          image={safetyfirst}
         />
         <CardContent>
           <Typography variant="h5" component="div">

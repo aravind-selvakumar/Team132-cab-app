@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, CardContent, Typography, TextField, IconButton, InputAdornment, List, ListItem, ListItemIcon, ListItemText, Avatar, Button } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Typography, TextField, IconButton, InputAdornment, List, ListItem, ListItemIcon, ListItemText, Avatar, Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PaymentIcon from '@mui/icons-material/Payment';
@@ -7,6 +7,9 @@ import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import DriveEtaIcon from '@mui/icons-material/DriveEta';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import EventIcon from '@mui/icons-material/Event';
+import pendingpayment from '../assets/images/pendingpayment.jpg';
+import homesuggestion from '../assets/images/homesuggestion.jpg';
+import waytosave from '../assets/images/waytosave.jpg';
 
 const Home = () => {
   return (
@@ -31,7 +34,7 @@ const Home = () => {
                 </IconButton>
               </InputAdornment>
             ),
-            sx: { color: 'white', bgcolor: 'grey.800', borderRadius: 1 }
+            sx: { color: 'white', bgcolor: 'grey.800', borderRadius: 20 }
           }}
         />
       </Box>
@@ -42,17 +45,53 @@ const Home = () => {
           <ListItemIcon sx={{ color: 'white' }}>
             <AccessTimeIcon />
           </ListItemIcon>
-          <ListItemText primary="Piccadilly Circus" secondary="Piccadilly Circus, London W1J 9HS England" />
+          <ListItemText primary="Piccadilly Circus. Piccadilly Circus, London W1J 9HS England"/>
         </ListItem>
         <ListItem>
           <ListItemIcon sx={{ color: 'white' }}>
             <AccessTimeIcon />
           </ListItemIcon>
-          <ListItemText primary="Natural History Museum" secondary="Cromwell Rd, South Kensington, London SW7 5BD, United Kingdom" />
+          <ListItemText primary="Natural History Museum. Cromwell Rd, South Kensington, London SW7 5BD, United Kingdom" />
         </ListItem>
       </List>
 
       {/* Payment Reminder */}
+
+      <Card style={{ marginBottom: '20px' , borderRadius: 20}}>
+        <CardMedia
+          component="img"
+          alt="Banner 1"
+          height="140"
+          image={pendingpayment}
+        />
+        
+      </Card>
+
+      {/* Suggestion*/}
+      <Card style={{ marginBottom: '30px' }}>
+        <CardMedia
+          component="img"
+          alt="Banner 1"
+          height="180"
+          image={homesuggestion}
+        />
+      </Card>
+
+      {/* ways to save*/}
+      <Typography aling='left'>
+          <hr/>
+          <h2> Ways to Save</h2>
+        </Typography>
+      
+      <Card style={{ marginBottom: '30px',  borderRadius: 20 }}>
+        <CardMedia
+          component="img"
+          alt="Banner 1"
+          height="200"
+          image={waytosave}
+        />
+      </Card>
+{/*
       <Card sx={{ bgcolor: 'grey.800', borderRadius: 1, marginBottom: 2 }}>
         <CardContent>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -65,7 +104,9 @@ const Home = () => {
           </Box>
         </CardContent>
       </Card>
+      */}
 
+{/* */}
       {/* Suggestions */}
       <Box sx={{ marginBottom: 2 }}>
         <Typography variant="h6" sx={{ marginBottom: 1 }}>Suggestions</Typography>
