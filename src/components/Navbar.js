@@ -4,6 +4,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useNavigate } from 'react-router-dom';
+import '../App.css'; // Import the CSS file
 
 const Navbar = () => {
   const [value, setValue] = useState(0);
@@ -24,7 +25,7 @@ const Navbar = () => {
     <BottomNavigation
       value={value}
       onChange={handleChange}
-      style={{ width: '100%', position: 'fixed', bottom: 0, backgroundColor: 'black' }}
+      style={{ maxWidth: '414px', width: '100%', position: 'fixed', bottom: 0, backgroundColor: 'black', display: 'flex', justifyContent: 'space-around' }}
     >
       <BottomNavigationAction label="Home" icon={<HomeIcon />} style={{ color: 'white' }} />
       <BottomNavigationAction label="Request Ride" icon={<DirectionsCarIcon />} style={{ color: 'white' }} />
